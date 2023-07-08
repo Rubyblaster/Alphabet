@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learning the Alphabet!</title>
+</head>
+<style>
+body{
+	background-color: lightgreen;
+}
+div{
+	border: 3px solid white;
+	border-radius:15px;
+	background-color: lightblue;
+	color: green;
+	font-size: 250px;
+	text-align: center
+}
+</style>
+<script type="text/javascript">
+
+function add(){
+var words = ["A", "B", "C", "D", "E", "F", "G", "H", "I",
+             "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+			 "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var inputText = document.getElementById("input").value;
+	words.push(inputText);
+var wordChose = words[Math.floor(Math.random() * words.length)];
+var div = document.getElementById("div1");
+div.innerHTML = wordChose;
+}
+setInterval("add()", 1000);
+</script>
+<body>
+<h1>Learning the Alphabet!</h1>
+<div id="div1" style ="">Nice</div>
+<input type="text" id="input">
+<button onclick="add()">Add text</button>
+</body>
+</html>
